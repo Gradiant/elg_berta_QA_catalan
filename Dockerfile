@@ -19,8 +19,8 @@ EXPOSE 8866
 WORKDIR /elg_berta_QA_catalan/
 COPY ./ /elg_berta_QA_catalan/
 
-CMD ["python3", "serve.py"]
-
 RUN ["python3", "-c", "from init_model import Initializer; Initializer()"]
 
 ENV TRANSFORMERS_OFFLINE=1
+
+CMD ["python3", "serve.py"]
